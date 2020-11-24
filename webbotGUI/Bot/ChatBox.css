@@ -1,0 +1,85 @@
+#ChatContain{
+    background-color: white;
+    height: 344px;
+    overflow: hidden;
+}
+
+#ChatLog{
+    background-color: white;
+    width: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    height: 96%;
+    overflow-y: auto;
+}
+
+#ChatLog .bot_res{
+    display: inline-block;
+    background-color: #3E4042;
+    color: #E4E6EB;
+    border-radius: 5px;
+    max-width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+#ChatLog .user_res{
+    display: inline-block;
+    background-color: #0084FF;
+    color: #E4E6EB;
+    border-radius: 5px;
+    max-width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+#ChatFoot{
+    display: inline-block;
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 45px;
+}
+
+#ChatFoot #send{
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: 5px;
+    outline: none;
+    float: left;
+}
+
+#ChatFoot #report{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 5px;
+    outline: none;
+    float: right;
+}
+
+#ChatFoot #text-to-speech{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 5px;
+    outline: none;
+    float: right;
+}
+
+#ChatFoot #user_input{
+    border-radius: 20px;
+    height: 30px;
+    outline: 0;
+    width: 185px;
+    margin: 4px 5px 5px 5px;
+}
