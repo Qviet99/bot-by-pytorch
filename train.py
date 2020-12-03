@@ -1,12 +1,13 @@
 import json
 from nltk_utils import tokenize, stem, bag_of_words
 import numpy as np
-
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-
+from getJSON import getJSON
 from model import NeuralNet
+
+getJSON()
 
 with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
     intents = json.load(f)

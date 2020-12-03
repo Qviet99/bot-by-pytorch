@@ -1,8 +1,10 @@
 import random
 import json
 import torch
+from multiwords import multiSentences
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+from sendNotice import sendNotice
 
 device = torch.device('cpu')
 
@@ -23,9 +25,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-
-def getRes(msg):
-    bot_response = ""
+def solve(msg):
     sentence = msg
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -40,7 +40,23 @@ def getRes(msg):
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 response = random.choice(intent['responses'])
-                bot_response = (response)
+                return "\n" + msg + ": " + (response)
     else:
-        bot_response = ("I do not understand")
+        sendNotice(msg)
+        return "\n" + msg + ": Mình tạm thời chưa có đáp án"
+
+def getRes(mssg):
+    bot_response = ""
+    if type(multiSentences(mssg)) is str:
+        bot_response += solve(mssg)
+    else:
+        listmsg = multiSentences(mssg)
+        if listmsg == []:
+            bot_response += "Vậy bạn muốn biết về điều gì"
+        else:
+            for msg in listmsg:
+                bot_response += '\n' + solve(msg)
+    #print(type(bot_response))
     return bot_response
+
+#getRes("chào")

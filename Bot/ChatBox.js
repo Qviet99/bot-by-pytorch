@@ -1,4 +1,5 @@
-import React from 'react'
+import { Dialog, DialogContent, DialogTitle } from '@material-ui/core';
+import React, { useState } from 'react'
 import './ChatBox.css';
 
 var state = false;
@@ -12,7 +13,6 @@ function sendMsg() {
 
     }
 }
-
 
 function div(str,msg){
     var div1 = document.createElement('div');
@@ -31,6 +31,7 @@ var keyEnter = (event) => {
         sendMsg()
     }
 }
+
 
 function botRes(msg){
     var myHeaders = new Headers();
@@ -81,7 +82,24 @@ function botSpeech(){
     .catch(error => console.log('error', error));
 }
 
-function botRestart(){
+function sendAPI(msg){
+    var raw = JSON.stringify({"answerError":msg});
+    var requestOptions = {
+    method: 'POST',
+    headers: {
+        "Content-Type":"application/json"
+    },
+    body: raw,
+    redirect: 'follow'
+    };
+
+    fetch("/save-report", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log('Done'))
+    .catch(error => console.log('error', error));
+}
+
+/*function botRestart(){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -92,11 +110,38 @@ function botRestart(){
     };
 
     return fetch("http://localhost:9000/api/restart", requestOptions)
-}
+}*/
+
 
 function ChatBox(){
+    const [open, setOpen] = useState(false);
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const sendReport = () => {
+        var text = document.getElementById("txtArea").value;
+        sendAPI(text);
+        handleClose();
+    };
+
     return (
         <div>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle id="reportH">
+                    Report
+                </DialogTitle>
+                <DialogContent id="reportB">
+                    <textarea id="txtArea" rows="7" cols="66">
+                    </textarea>
+                    <button class="rpbtn" onClick={sendReport}>Gửi</button>
+                    <button class="rpbtn" onClick={handleClose}>Đóng</button>
+                </DialogContent>
+            </Dialog>
             <div id="ChatContain">
                 <div id="ChatLog"></div>
             </div>
@@ -107,7 +152,7 @@ function ChatBox(){
                 </input>
                 <button id="text-to-speech" onClick={activeVoice}>TTS
                 </button>
-                <button id="report">RP
+                <button id="report" onClick={handleClickOpen}>RP
                 </button>
             </div>
         </div>
