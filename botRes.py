@@ -40,15 +40,16 @@ def solve(msg):
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 response = random.choice(intent['responses'])
-                return "\n" + msg + ": " + (response)
+                return "\n" + (response)
     else:
-        sendNotice(msg)
         return "\n" + msg + ": Mình tạm thời chưa có đáp án"
 
 def getRes(mssg):
     bot_response = ""
     if type(multiSentences(mssg)) is str:
         bot_response += solve(mssg)
+        if "Mình tạm thời chưa có đáp án" in solve(mssg):
+            sendNotice(mssg)
     else:
         listmsg = multiSentences(mssg)
         if listmsg == []:
@@ -56,7 +57,10 @@ def getRes(mssg):
         else:
             for msg in listmsg:
                 bot_response += '\n' + solve(msg)
+                if "Mình tạm thời chưa có đáp án" in solve(msg):
+                    sendNotice(msg)
+                    print(msg)
     #print(type(bot_response))
     return bot_response
 
-#getRes("chào")
+getRes(['156156','zxzxax'])

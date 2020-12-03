@@ -1,9 +1,9 @@
 {
     "intents": [
         {
-            "tag": "khối a",
+            "tag": "con",
             "patterns": [
-                "điểm khối a",
+                "con",
                 "See you later",
                 "Goodbye"
             ],

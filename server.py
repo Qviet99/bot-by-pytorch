@@ -16,7 +16,7 @@ def index():
 
 @app.route('/api/bot/speech', methods=['POST'])
 def botspeech():
-    path = "C:/Users/KimAnh/Desktop/Cap1/Python_Bot_Pytorch/botspeech.wav"
+    path = "C:/Users/KimAnh/Desktop/Python_Bot_Pytorch/botspeech.wav"
     return send_file(path, mimetype="audio/wav", as_attachment=False, attachment_filename="test.wav")
 
 if __name__ == '__main__':
