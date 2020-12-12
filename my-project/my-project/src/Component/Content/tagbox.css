@@ -1,0 +1,51 @@
+.bannerads .boxtag .titletag{
+    background-color: #f3f3f3;
+    line-height: 29px;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.bannerads .boxtag{
+	width:200px; 
+	border:#dbdbdd 1px solid;		
+	display:block;
+	position:relative;
+	margin-top:10px;
+}
+.bannerads .titletag{
+	background-color:#f3f3f3;
+	line-height:29px;	
+	position:relative;
+	color:#000;
+	font-weight:bold;
+	display:block;
+	text-align:center;
+}
+
+.bannerads .boxtag{
+	margin:5px;
+	text-align:justify;
+}
+.bannerads .boxtag .item{	
+	padding:1px;	
+}
+
+.bannerads .boxtag .item a.tag1 {  line-height: 25px; font-size: 11px; color: #063e52; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag1:hover { line-height: 25px; font-size: 11px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}
+ 
+.bannerads .boxtag .item a.tag2 {  line-height: 25px; font-size: 12px; color: #2cb8d1; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag2:hover { line-height: 25px; font-size: 12px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}
+ 
+.bannerads .boxtag .item a.tag4 {  line-height: 25px; font-size: 14px; color: #222222; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag4:hover { line-height: 25px; font-size: 14px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}
+ 
+.bannerads .boxtag .item a.tag5 {  line-height: 25px; font-size: 15px; color: #00465f; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag5:hover { line-height: 25px; font-size: 15px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}
+ 
+.bannerads .boxtag .item a.tag6 {  line-height: 25px; font-size: 16px; color: #2fb9dd; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag6:hover { line-height: 25px; font-size: 16px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}
+ 
+.bannerads .boxtag .item a.tag7 {  line-height: 25px; font-size: 17px; color: #3896cc; text-decoration: none; font-weight: normal}
+.bannerads .boxtag .item a.tag7:hover { line-height: 25px; font-size: 17px; color: #FFFFFF; text-decoration: none; font-weight: bold; background: #000000;}

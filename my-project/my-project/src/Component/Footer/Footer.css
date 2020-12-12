@@ -1,0 +1,53 @@
+#Footer {
+    width: 815px;
+    height: 150px;
+    position: relative;
+    background: url(../Img/footer_bg.jpg) repeat-x left top;
+}
+#Footer #logodtu{
+    font-size: 10pt;
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-left: 35px;
+    background: url(../Img/logodtu.jpg) no-repeat;
+    color: #7e000c;
+    font-weight: bold;
+    line-height: 32px;
+}
+#Footer ul {
+    font-size: 10pt;
+    position: absolute;
+    top: 17px;
+    left: 200px;
+    width: 590px;
+    height: 32px;
+}
+#Footer ul li {
+    float: left;
+    padding-left: 10px;
+    list-style: none;
+}
+#Footer ul li a {
+    height: 32px;
+    color: #000;
+    line-height: 0px;
+    text-align: right;
+    white-space: nowrap;
+    color: black;
+    font-weight: bold;
+}
+#Footer ul li a:hover {
+    color: #b91e29;
+}
+#Footer .lienhe {
+    text-align: right;
+    color: #000;
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    line-height: 16px;
+    font-size: 8pt;
+    padding-bottom: 7px;
+}

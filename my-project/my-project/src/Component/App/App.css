@@ -1,0 +1,18 @@
+#body {
+  background-color: #656565;
+  font: normal normal 10pt Tahoma, Helvetica, sans-serif;
+  line-height: 1.2em;
+  color: #000000;
+}
+#container{  
+  width: 817px;
+  margin: 0 auto;
+  border: #808080 2px solid;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.wrapper {
+  background-color:#fff;
+  width:815px;
+  margin:0 auto;
+}

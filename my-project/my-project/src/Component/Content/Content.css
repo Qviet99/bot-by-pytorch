@@ -1,0 +1,131 @@
+.bannerads {
+    width: 206px;
+    margin-right: 200px;
+    background-color: white;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+.ads {
+    width: 206px;
+    margin-right: 200px;
+}
+.bannerads .ads img{
+    width:206px;
+    padding: 0px;
+    margin-top: 1px;
+}
+.bannerads #tuvan .title{
+    background:url(../Img/menu_bg.jpg) repeat-x left top;
+	padding-left:35px;
+	line-height:30px;
+	color:#fff;
+    font-weight:bold;
+    font-size: 15px;
+    height: 30px;
+    padding-bottom: 0px;
+}
+.bannerads #tuvan{
+    border: 2px solid;
+}
+.bannerads #menucauhoi{
+    border: 1px solid gray;
+}
+.bannerads #menucauhoi #case .title{
+    padding-left: 35px;
+    color: #5c9700;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+    height: 36px;
+    position: relative;
+    width: 206px;
+    margin-left: -30px;
+}
+.bannerads #menucauhoi ul h4 .cauhoi{
+    line-height: 9px;
+    padding-left: 5px;
+    width: 100px;
+    height: 18px;
+}
+.bannerads #menucauhoi ul .le{
+    background-color: #f2f2f2;
+}
+.bannerads #menucauhoi ul .chan{
+    background-color: #d9d9d9;
+}
+.bannerads #menucauhoi #case{
+    height: 36px;
+    border: 1px solid;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.bannerads #menucauhoi ul{
+    border: 1px solid;
+    margin-top: 1px;
+    margin-left: 0px;
+    width: 200px;
+}
+
+.bannerads #menucauhoi ul h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid gray;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 25px;
+    width: 203px;
+}
+.bannerads #menucauhoi .viewall{
+    color: #993300;
+    font-size: 8pt;
+    padding-left: 130px;
+    height: 20px;
+    margin-top: 0px;
+    border: 1px solid gray;
+}
+.bannerads #menucauhoi .cauhoi .datcauhoi a:hover{
+    color: #b91e29;
+}
+.bannerads #menucauhoi .cauhoi .datcauhoi a{
+    color: #5c9700;
+}
+.bannerads #menucauhoi .cauhoi .datcauhoi{
+    position: relative;
+    bottom: 0px;
+    right: 2px;
+    height: 35px;
+    line-height: 36px;
+    padding-left: 27px;
+    font-weight: bold;
+    margin-left: -20px;
+    border: gray;
+    width: 200px;
+}
+.bannerads .boxcounter .title{
+    background:url(../Img/menu_bg.jpg) repeat-x scroll left top transparent;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 25px;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bannerads .boxcounter{
+    border: 1px solid gray;
+}
+.bannerads .boxcounter .counter{
+    margin-left: 10px;
+    margin: 5px 10px;
+    line-height: 20px;
+}
+.bannerads .boxcounter .counter td{
+    
+    font-size: 12px;
+}

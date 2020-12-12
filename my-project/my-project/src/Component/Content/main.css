@@ -1,0 +1,190 @@
+.main{
+    width: 589px;
+    margin-left: 216px;
+    padding-left: 10px;
+    margin-top: -2170px;
+    height: 2150px;
+    position: relative;
+}
+.main #hedaotao {
+    margin-top: 2px;
+    padding-bottom: 20px;
+    width: 568px;
+    font-size: 10pt;
+}
+.main .thongbao{
+    margin-top: 20px;
+    background-color: gray;
+    background-image: linear-gradient(to bottom, rgb(233, 233, 233), rgba(255, 255, 255, 0.644), white);
+    height: 175px;
+    width: 585px;
+}
+.main .thongbao h4{
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center;
+}
+.main .thongbao #box a:link, a:visited {
+    color: #b91e29;
+    text-decoration: none;
+}
+.main .thongbao #boxleft{
+    float: left;
+    padding: 2px;
+    margin-right: 4px;
+    border: 2px #d5d5d5 solid;
+    width: 183px;
+    height: 150px;
+}
+.main .thongbao #boxleft .title{
+    margin-top: 3px;
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid gray;
+}
+.main .thongbao #boxleft .noidung{
+    margin-left: 0px;
+    display: block;
+    margin-top: -15px;
+    height: 100px;
+    border: 2px solid gray;
+}
+.main .thongbao #boxcenter{
+    float: left;
+    padding: 2px;
+    margin-right: 4px;
+    border: 2px #d5d5d5 solid;
+    width: 183px;
+    height: 150px;
+}
+.main .thongbao #boxcenter .title{
+    margin-top: 3px;
+    text-align: center;
+    height: 30px;
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+}
+.main .thongbao #boxcenter .noidung{
+    margin-left: 0px;
+    display: block;
+    margin-top: -15px;
+    height: 100px;
+    border: 2px solid gray;
+}
+.main .thongbao #boxright{
+    float: left;
+    padding: 2px;
+    margin-right: 4px;
+    border: 2px #d5d5d5 solid;
+    width: 183px;
+    height: 150px;
+}
+.main .thongbao #boxright .title{
+    margin-top: 3px;
+    text-align: center;
+    height: 30px;
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+}
+.main .thongbao #boxright .noidung{
+    margin-left: 0px;
+    display: block;
+    margin-top: -15px;
+    height: 100px;
+    border: 2px solid gray;
+}
+.line{
+    float: left;
+    overflow: hidden;
+}
+.main #hedaotao .box {
+    position: relative;
+    border: #d9d9d9 1px solid;
+    width: 273px;
+    height: auto;
+    background: url(../Img/logo_bg.jpg) no-repeat right center;
+    float: left;
+    padding-bottom: 35px;
+    margin-bottom: 12px;
+}
+.main #hedaotao .box .title {
+    margin-top: 40px;
+    margin-left: -8px;
+    color: #fff;
+    height: 30px;
+    text-transform: uppercase;
+    width: 260px;
+}
+.main #hedaotao .lbox {
+    margin-left: 5px;
+}
+.main #hedaotao .rbox {
+    margin-left: 11px;
+}
+.main #hedaotao .box .khoahoc li {
+    background: url(../Img/line.jpg) repeat-x left bottom;
+    font-size: 10pt;
+    width: 250px;
+    min-height: 18px;
+    padding: 5px 0;
+
+    float: left;
+}
+.main #hedaotao .box a .more {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}
+.main #hedaotao .box .title #center {
+    background: url(../Img/hdt_title2.jpg) repeat-x left top;
+    height: 30px;
+    line-height: 27px;
+    width: 90%;
+    font-weight: bold;
+    font-size: 8pt;
+    margin-left: 10px;
+    margin-top: -30px;
+}
+.main #hedaotao .box .title #left {
+    float: left;
+    width: 10px;
+    display: inline;
+    padding-left: 10px;
+    background: url(../Img/hdt_title1.jpg) no-repeat;
+}
+.main #hedaotao .box .title #right {
+    float: right;
+    width: 20px;
+    margin-left: -3px;
+    background: url(../Img/hdt_title3.gif) no-repeat left top;
+}
+.main #hedaotao .box .title #left, #right {
+    height: 30px;
+}
+ul, li, a {
+    list-style: inside;
+    margin: 0;
+    padding: 0;
+}
+.main #hedaotao .row1 {
+    float: left;
+}
+.main .tintuc a .more {
+    position: absolute;
+    right: 20px;
+    margin-top: 5px;
+}
+.main .tintuc {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main .tintuc .noidung li {
+    background: url(../Img/line.jpg) repeat-x left bottom;
+    padding: 4px 2px 4px 4px;
+    margin-left: 6px;
+}
+em {
+    font-style: italic;
+    font-size: 11px;
+}
