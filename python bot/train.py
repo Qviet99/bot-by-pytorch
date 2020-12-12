@@ -7,7 +7,7 @@ from torch.utils.data import Dataset, DataLoader
 from getJSON import getJSON
 from model import NeuralNet
 
-getJSON()
+#getJSON()
 
 with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
     intents = json.load(f)

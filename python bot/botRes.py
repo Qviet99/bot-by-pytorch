@@ -14,6 +14,7 @@ with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
 
 FILE = "data.pth"
 data = torch.load(FILE)
+btags = ""
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
@@ -27,6 +28,7 @@ model.load_state_dict(model_state)
 model.eval()
 
 def solve(msg):
+    global btags
     sentence = msg
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -40,8 +42,12 @@ def solve(msg):
     if prob.item() > 0.75:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                response = random.choice(intent['responses'])
-                return (response) + "\n"
+                if tag not in btags:
+                    btags += tag + "-"
+                    response = random.choice(intent['responses'])
+                    return (response) + "\n"
+                else:
+                    return ""
     else:
         return msg + ": Mình tạm thời chưa có đáp án" + "\n"
 
@@ -62,8 +68,10 @@ def getRes(mssg):
                 #if "Mình tạm thời chưa có đáp án" in solve(msg):
                 #   sendNotice(msg)
                     #print("")
-    #print("chao ban", bot_response)
+    global btags
+    btags = ""
+    #print(bot_response)
     tts(bot_response)
     return bot_response
 
-#getRes('y dược')
+#getRes('ngày, ngày, khu vực')

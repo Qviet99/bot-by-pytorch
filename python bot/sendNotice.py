@@ -1,10 +1,13 @@
 import requests
 import json
+from datetime import datetime
+
+dt = datetime.now().strftime('%H:%M:%S %d-%m-%Y')
 
 def sendNotice(data):
     url = "http://localhost:8080/save-nonAnswer"
 
-    payload={"question": data, "timeReport":"01:01:00 12-02-2020"}
+    payload={"question": data, "timeReport":dt}
     headers = {
     'Content-Type': 'application/json'
     }
