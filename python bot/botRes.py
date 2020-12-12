@@ -15,6 +15,7 @@ with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
 FILE = "data.pth"
 data = torch.load(FILE)
 btags = ""
+bques = ""
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
@@ -29,6 +30,7 @@ model.eval()
 
 def solve(msg):
     global btags
+    global bques
     sentence = msg
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
@@ -43,13 +45,17 @@ def solve(msg):
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 if tag not in btags:
-                    btags += tag + "-"
+                    btags += tag + " - "
                     response = random.choice(intent['responses'])
                     return (response) + "\n"
                 else:
                     return ""
     else:
-        return msg + ": Mình tạm thời chưa có đáp án" + "\n"
+        if msg not in bques:
+            bques += msg + " - "
+            return msg + ": Mình tạm thời chưa có đáp án" + "\n"
+        else:
+            return ""
 
 def getRes(mssg):
     bot_response = ""
@@ -57,7 +63,6 @@ def getRes(mssg):
         bot_response += solve(mssg)
         #if "Mình tạm thời chưa có đáp án" in solve(mssg):
         #    sendNotice(mssg)
-            #print("")
     else:
         listmsg = multiSentences(mssg)
         if listmsg == []:
@@ -67,11 +72,13 @@ def getRes(mssg):
                 bot_response += solve(msg)
                 #if "Mình tạm thời chưa có đáp án" in solve(msg):
                 #   sendNotice(msg)
-                    #print("")
     global btags
     btags = ""
+    global bques
+    bques = ""
     #print(bot_response)
     tts(bot_response)
     return bot_response
 
-#getRes('ngày, ngày, khu vực')
+#msg = input('input: ')
+#getRes(msg)
