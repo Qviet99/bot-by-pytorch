@@ -1,0 +1,241 @@
+#ChatContain{
+    background-color: white;
+    height: 344px;
+    overflow: hidden;
+}
+
+#ChatLog{
+    background-color: white;
+    width: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    height: 96%;
+    overflow-y: auto;
+}
+
+#ChatLog .bot_res{
+    display: inline-block;
+    background-color: #3E4042;
+    color: #E4E6EB;
+    border-radius: 5px;
+    max-width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+#ChatLog .user_res{
+    display: inline-block;
+    background-color: #0084FF;
+    color: #E4E6EB;
+    border-radius: 5px;
+    max-width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+#ChatFoot{
+    display: inline-block;
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 45px;
+}
+
+#ChatFoot #send{
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 50%;
+    text-align: left;
+    margin-top: 3px;
+    margin-left: 5px;
+    outline: none;
+    float: left;
+    background-image: url("../Bot/img/send.png");
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hver .tooltiptext2 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    word-wrap: break-word;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 1%;
+    margin-left: -60px;
+}
+
+.hver .tooltiptext3 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    word-wrap: break-word;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 82%;
+    margin-left: -60px;
+}
+
+.hver .tooltiptext4 {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    word-wrap: break-word;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 82%;
+    margin-left: -60px;
+}
+
+.hver:hover .tooltiptext2{
+    visibility: visible;
+}
+
+.hver:hover .tooltiptext3{
+    visibility: visible;
+}
+
+.hver:hover .tooltiptext4{
+    visibility: visible;
+}
+
+#ChatFoot #report{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 5px;
+    outline: none;
+    float: right;
+    background-image: url("../Bot/img/report.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#ChatFoot #text-to-speech{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 5px;
+    outline: none;
+    float: right;
+    background-image: url("../Bot/img/texttospeech.png");
+    background-size: 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#ChatFoot #user_input{
+    border-radius: 20px;
+    height: 30px;
+    outline: 0;
+    width: 185px;
+    margin: 4px 5px 5px 5px;
+}
+
+#reportH{
+    width: 500px;
+    height: 20px;
+    color: #0084FF;
+    border-bottom: 1px solid #3E4042;
+}
+
+#reportB{
+    width: 500px;
+    height: 150px;
+}
+
+.rpbtn{
+    margin-right: 10px;
+}
+
+#Button{
+    position: fixed; 
+    display:block; 
+    margin: 0 0 0 1px; 
+    right: 0.5%;
+    bottom: 1%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    outline: none;
+    background-image: url("../Bot/img/bot.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#Button .tooltiptext {
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    word-wrap: break-word;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 102%;
+    left: -40%;
+    margin-left: -60px;
+}
+
+#Bot{
+    visibility: hidden;
+    position: fixed; 
+    display:block; 
+    width: 340px; 
+    height: 445px; 
+    margin: 0 0 0 1px; 
+    right: 0.5%;
+    bottom: 1%;
+    background-color: white;
+}
+
+#Bot #ChatHeader{
+    display: inline-block;
+    background-color: brown;
+    width: 100%;
+    height: 12%;
+    border-bottom: 1px solid black;
+}
+
+#Bot #ChatHeader #bot_img{
+    width: 14%;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+#Bot #ChatBody{
+    bottom: 0%;
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    height: 86%;
+}
