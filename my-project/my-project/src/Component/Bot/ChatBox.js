@@ -84,10 +84,13 @@ function botSpeech(){
 }
 
 function sendReportAPI(msg){
+    var date = new Date().toLocaleDateString('en-GB').replaceAll("/", "-");
+    var time = new Date().toLocaleTimeString([], {hour12:false});
+    var datetime = time + " " + date;
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify({"textReport":msg,"timeReport":"01:01:00 12-02-2020"});
+    var raw = JSON.stringify({"textReport":msg,"timeReport":datetime});
 
     var requestOptions = {
     method: 'POST',
@@ -106,20 +109,8 @@ function showChat() {
     startServer()
     document.getElementById("Button").style.visibility = 'hidden';
     document.getElementById("Bot").style.visibility = 'visible';
+    div('bot_res','Chào bạn, mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh DTU !') 
 }
-
-/*function botRestart(){
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var requestOptions = {
-    method: 'GET',
-    headers: myHeaders,
-    redirect: 'follow'
-    };
-
-    return fetch("http://localhost:9000/api/restart", requestOptions)
-}*/
 
 function startServer(){
     var raw = "";
