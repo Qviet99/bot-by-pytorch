@@ -5,6 +5,7 @@ from multiwords import multiSentences
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 from sendNotice import sendNotice
+from texttospeech import tts
 
 device = torch.device('cpu')
 
@@ -40,27 +41,29 @@ def solve(msg):
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 response = random.choice(intent['responses'])
-                return "\n" + (response)
+                return (response) + "\n"
     else:
-        return "\n" + msg + ": Mình tạm thời chưa có đáp án"
+        return msg + ": Mình tạm thời chưa có đáp án" + "\n"
 
 def getRes(mssg):
     bot_response = ""
     if type(multiSentences(mssg)) is str:
         bot_response += solve(mssg)
-        if "Mình tạm thời chưa có đáp án" in solve(mssg):
-            sendNotice(mssg)
+        #if "Mình tạm thời chưa có đáp án" in solve(mssg):
+        #    sendNotice(mssg)
+            #print("")
     else:
         listmsg = multiSentences(mssg)
         if listmsg == []:
             bot_response += "Vậy bạn muốn biết về điều gì"
         else:
             for msg in listmsg:
-                bot_response += '\n' + solve(msg)
-                if "Mình tạm thời chưa có đáp án" in solve(msg):
-                    sendNotice(msg)
-                    print(msg)
-    #print(type(bot_response))
+                bot_response += solve(msg)
+                #if "Mình tạm thời chưa có đáp án" in solve(msg):
+                #   sendNotice(msg)
+                    #print("")
+    #print("chao ban", bot_response)
+    tts(bot_response)
     return bot_response
 
-getRes(['156156','zxzxax'])
+#getRes('y dược')

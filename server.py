@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
-from texttospeech import tts
 from botRes import getRes
 
 app = Flask(__name__)
@@ -11,7 +10,6 @@ app.config['JSON_AS_ASCII'] = False
 @app.route('/api/bot', methods=['POST'])
 def index():
     data = request.get_json()
-    tts(getRes(str(data["user"])))
     return str(getRes(data["user"]))
 
 @app.route('/api/bot/speech', methods=['POST'])

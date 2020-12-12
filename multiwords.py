@@ -1,9 +1,13 @@
 bag_of_negative_words = ['khong', 'không', 'đừng']
-bag_of_connect_words = [', ', '. ', 'và', 'với', 'cùng',"nhưng","hoặc", "hoac" ,";"]
+bag_of_connect_words = [', ', '. ', 'và', 'với', 'cùng','nhưng','hoặc', 'hoac' ,';','vs','&']
 bag_of_positive_words = ['nói','về','muốn','cho','đưa','hiện','hỏi','biết','biêt','biet']
+bag_of_me = ['tôi', 'tớ', 'mình', 'tui', 'tao']
 bag_of_compound = bag_of_connect_words + bag_of_negative_words
 
 def multiSentences(msg):
+    for word in bag_of_me:
+        if word in msg:
+            msg = msg.replace(word, "")
     compound = False
     for word in bag_of_compound:
         if word in msg:
@@ -16,12 +20,10 @@ def multiSentences(msg):
         fresults1 = []
         fresults2 = []
         fresults3 = []
-        f = msg.replace("tôi", "")
         for word in bag_of_negative_words:
-            if word in f:
-                f = f.replace(word, "$#$!&")
-        #print(f)  
-        arrStr = f.split("$#$")
+            if word in msg:
+                msg = msg.replace(word, "$#$!&")
+        arrStr = msg.split("$#$")
         for element in arrStr:
             if "!&" not in element:
                 fresults.append(element)
@@ -92,7 +94,7 @@ def multiSentences(msg):
         #print( finalresults )
         return finalresults
 
-#multiSentences("tôi muốn biết điểm khối a, khối b, tôi muốn biết điểm khối e và khối f, khối g, khối h, khối l không muốn biết điểm khối b, muốn biết điểm khối c, khối f, không muốn biết điểm khối d, khối e, muốn biết khối g")
+#multiSentences("tôi muốn biết điểm khối a, khối b")
 
 
 
