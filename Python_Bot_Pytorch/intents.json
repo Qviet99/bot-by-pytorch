@@ -1,0 +1,23 @@
+{
+    "intents": [
+        {
+            "tag": "a",
+            "patterns": [
+                "helo",
+                "bakaka"
+            ],
+            "responses": [
+                "mkckamsalmslckamslksc"
+            ]
+        },
+        {
+            "tag": "chao",
+            "patterns": [
+                "chao"
+            ],
+            "responses": [
+                "helo"
+            ]
+        }
+    ]
+}

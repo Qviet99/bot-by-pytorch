@@ -1,7 +1,7 @@
-bag_of_negative_words = ['khong', 'không', 'đừng']
-bag_of_connect_words = [', ', '. ', 'và', 'với', 'cùng','nhưng','hoặc', 'hoac' ,';','vs','&']
-bag_of_positive_words = ['nói','về','muốn','cho','đưa','hiện','hỏi','biết','biêt','biet']
-bag_of_me = ['tôi', 'tớ', 'mình', 'tui', 'tao']
+bag_of_negative_words = [' khong ', ' không ', ' đừng ']
+bag_of_connect_words = [', ', '. ', ' và ', ' với ', ' cùng ',' nhưng ',' hoặc ', ' hoac ' ,' ; ',' vs ',' & ']
+bag_of_positive_words = [' nói ',' về ',' muốn ',' cho ',' đưa ',' hiện ',' hỏi ',' biết ',' biêt ',' biet ']
+bag_of_me = [' tôi ', ' tớ ', ' mình ', ' tui ', ' tao ']
 bag_of_compound = bag_of_connect_words + bag_of_negative_words
 
 def multiSentences(msg):

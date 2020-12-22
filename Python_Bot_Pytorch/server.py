@@ -10,7 +10,7 @@ app.config['JSON_AS_ASCII'] = False
 @app.route('/api/bot', methods=['POST'])
 def index():
     data = request.get_json()
-    return str(getRes(data["user"]))
+    return str(getRes(data["user"],data["voice"]))
 
 @app.route('/api/bot/speech', methods=['POST'])
 def botspeech():
