@@ -147,10 +147,10 @@
     margin-right: 5px;
     outline: none;
     float: right;
-    background-image: url("../Bot/img/texttospeech.png");
-    background-size: 180%;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+#ChatFoot #text-to-speech #texttospeech{
+    padding-top: 5px;
 }
 
 #ChatFoot #user_input{

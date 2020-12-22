@@ -1,9 +1,12 @@
 import { Dialog, DialogContent, DialogTitle } from '@material-ui/core';
 import React, { useState } from 'react'
 import './ChatBox.css';
+import tts from './img/texttospeech.png'
+import un_tts from './img/unable_texttospeech.png'
 
 var state = false;
- 
+var audioCtx = new AudioContext() 
+
 function sendMsg() {
     var messeg = document.getElementById("user_input").value;
     if(messeg !== ""){
@@ -16,7 +19,7 @@ function sendMsg() {
 
 function div(str,msg){
     var div1 = document.createElement('div');
-    if(str == 'bot_res')
+    if(str === 'user_res')
         div1.style.textAlign = "right";
     var div2 = document.createElement('div');
     div2.className = str;
@@ -37,7 +40,7 @@ var keyEnter = (event) => {
 
 function botRes(msg){
     var voice = 0;
-    if (state == true){
+    if (state === true){
         voice = 1
     }
     var myHeaders = new Headers();
@@ -58,16 +61,20 @@ function botRes(msg){
         div('bot_res',result);
     })
     .then((speech) => {
-        if(state == true)
+        if(state === true)
             botSpeech()
     })
 }
 
 function activeVoice(){
-    if(state == true)
+    if(state === true){
         state = false;
-    else
+        document.getElementById("texttospeech").src = un_tts;
+    }
+    else{
         state = true;
+        document.getElementById("texttospeech").src = tts;
+    }
 }
 
 function botSpeech(){
@@ -76,7 +83,6 @@ function botSpeech(){
         body: '',
         redirect: 'follow'
     };
-    var audioCtx = new AudioContext()
     fetch("http://localhost:6000/api/bot/speech", requestOptions)
     .then(response => response.arrayBuffer())
     .then(result => audioCtx.decodeAudioData(result, function(decodedData) {
@@ -118,8 +124,6 @@ function showChat() {
 }
 
 function startServer(){
-    var raw = "";
-
     var requestOptions = {
     method: 'GET',
     redirect: 'follow'
@@ -176,6 +180,7 @@ function ChatBox(){
                             </button>
                             <input id="user_input" onKeyDown={keyEnter}></input>
                             <button id="text-to-speech" class="hver" onClick={activeVoice}>
+                                <img id="texttospeech" src={un_tts} width="110%" height="75%" textAlign="justify"/> 
                                 <span class="tooltiptext3">Bot speech</span>
                             </button>
                             <button id="report" class="hver" onClick={handleClickOpen}>
