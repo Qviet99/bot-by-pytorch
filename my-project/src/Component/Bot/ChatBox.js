@@ -6,6 +6,7 @@ import un_tts from './img/unable_texttospeech.png'
 
 var state = false;
 var audioCtx = new AudioContext() 
+var serverStatus = false;
 
 function sendMsg() {
     var messeg = document.getElementById("user_input").value;
@@ -117,10 +118,18 @@ function sendReportAPI(msg){
 }
 
 function showChat() {
-    startServer()
+    if(serverStatus == false){
+        startServer();
+        serverStatus = true;
+    }
     document.getElementById("Button").style.visibility = 'hidden';
     document.getElementById("Bot").style.visibility = 'visible';
     div('bot_res','Chào bạn, mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh DTU !') 
+}
+
+function closeChat(){
+    document.getElementById("Bot").style.visibility = 'hidden';
+    document.getElementById("Button").style.visibility = 'visible';
 }
 
 function startServer(){
@@ -154,12 +163,14 @@ function ChatBox(){
     return (
         <div>
             <button id="Button" onClick={showChat}>
-                <span class="tooltiptext">Chào bạn ! Mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh</span>
+                <span class="tooltipbot">Chào bạn ! Mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh</span>
             </button>
             <div id="Bot">
-                <div id="ChatHeader"></div>
-                    <div id="ChatBody">
-                    <div>
+                <div id="ChatHeader">
+                    
+                </div>
+                <div id="ChatBody">
+                <div>
                         <Dialog open={open} onClose={handleClose}>
                             <DialogTitle id="reportH">
                                 Report

@@ -190,22 +190,36 @@
     background-image: url("../Bot/img/bot.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: red;
 }
-#Button .tooltiptext {
+#Button .tooltipbot {
     visibility: visible;
-    width: 120px;
+    width: 200px;
     background-color: black;
     color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    border-radius: 5px;
+    padding: 7px 7px;
     word-wrap: break-word;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    bottom: 102%;
-    left: -40%;
+    bottom: 115%;
+    left: -200%;
     margin-left: -60px;
+    text-align: left;
+}
+
+#Button .tooltipbot:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid black;
+    left: 190px;
+    top: 46px;
 }
 
 #Bot{
