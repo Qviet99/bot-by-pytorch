@@ -1,22 +1,489 @@
 {
     "intents": [
         {
-            "tag": "a",
+            "tag": "1",
             "patterns": [
-                "helo",
-                "bakaka"
+                "1551515"
             ],
             "responses": [
-                "mkckamsalmslckamslksc"
+                "cxzczxc"
             ]
         },
         {
-            "tag": "chao",
+            "tag": "an ninh mạng CMU",
             "patterns": [
-                "chao"
+                "cho hỏi khoa an ninh mạng CMU",
+                "cho hỏi ngành an ninh mạng quốc tế",
+                "an ninh mạng thuộc chương trình quốc tế",
+                "ngành an ninh mạng khoa CMU",
+                "khoa an ninh mạng CMU"
             ],
             "responses": [
-                "helo"
+                "An ninh Mạng chuẩn CMU mã ngành: 7480202 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hoá (A00), 2.Toán, KHTN, Văn (A16), 3.Văn, Toán, Lý (C01), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "bye",
+            "patterns": [
+                "See you next time",
+                "See you later",
+                "Goodbye",
+                "bye",
+                "tạm biệt"
+            ],
+            "responses": [
+                "See you next time",
+                "have a good day",
+                "See you later !",
+                "bye"
+            ]
+        },
+        {
+            "tag": "chào",
+            "patterns": [
+                "chào bot",
+                "chào",
+                "hello",
+                "hi",
+                "hey"
+            ],
+            "responses": [
+                "chào bạn"
+            ]
+        },
+        {
+            "tag": "chỉ tiêu",
+            "patterns": [
+                "chỉ tiêu tuyển sinh",
+                "cho hỏi số lượng tuyển sinh",
+                "năm nay trường tuyển sinh bao nhiêu",
+                "số lượng tuyển sinh của trường "
+            ],
+            "responses": [
+                "chỉ tiêu tuyển sinh của trường năm 2020 HỆ ĐẠI HỌC:6000, HỆ CAO ĐẲNG: 0    \nxem chỉ tiêu tuyển sinh các năm trước tại:https://duytan.edu.vn/tuyen-sinh/Page/ViewProcDetail.aspx?idthongbao=16"
+            ]
+        },
+        {
+            "tag": "CMU",
+            "patterns": [
+                "cho hỏi khoa CMU",
+                "các ngành thuộc khoa CMU",
+                "các ngành thuộc khoa đào tạo quốc tế CMU",
+                "CMU"
+            ],
+            "responses": [
+                "khoa CMU gồm: \n +Ngành công nghệ Phần mềm chuẩn CMU mã ngành: 7480103 \n +Ngành an ninh Mạng chuẩn CMU mã ngành: 7480202 \n +Ngành hệ thống Thông tin Quản lý chuẩn CMU mã ngành: 7340405"
+            ]
+        },
+        {
+            "tag": "CSU",
+            "patterns": [
+                "cho hỏi khoa CSU",
+                "các ngành thuộc khoa CSU",
+                "các ngành thuộc khoa đào tạo quốc tế CSU"
+            ],
+            "responses": [
+                "khoa CSU gồm: \n +Ngành Xây dựng Dân dụng & Công nghiệp chuẩn CSU mã ngành: 7580201 \n +Ngành Kiến trúc Công trình chuẩn CSU mã ngành: 7580101"
+            ]
+        },
+        {
+            "tag": "Du lịch & Khách sạn PSU",
+            "patterns": [
+                "cho hỏi khoa Quản trị Du lịch Khách sạn chuẩn PSU",
+                "cho hỏi ngành Quản trị Du lịch Khách sạn khoa quốc tế",
+                "Quản trị Du lịch & Khách sạn thuộc chương trình quốc tế",
+                "ngành Quản trị Du lịch Khách sạn khoa PSU",
+                "khoa Quản trị Du lịch Khách sạn PSU"
+            ],
+            "responses": [
+                "Quản trị Du lịch & Khách sạn chuẩn PSU mã ngành: 7810201 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "Du lịch & Lữ hành PSU",
+            "patterns": [
+                "cho hỏi khoa Quản trị Du lịch Lữ hành chuẩn PSU",
+                "cho hỏi ngành Quản trị Du lịch  Lữ hành khoa quốc tế",
+                "Quản trị Du lịch Lữ hành thuộc chương trình quốc tế",
+                "ngành Quản trị Du lịch Lữ hành khoa PSU",
+                "khoa Quản trị Du lịch Lữ hành PSU"
+            ],
+            "responses": [
+                "Quản trị Du lịch & Lữ hành chuẩn PSU mã ngành: 7810103 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "Du lịch & Nhà hàng PSU",
+            "patterns": [
+                "cho hỏi khoa Quản trị Du lịch Nhà hàng chuẩn PSU",
+                "cho hỏi ngành Quản trị Du lịch Nhà hàng khoa quốc tế",
+                "Quản trị Du lịch & Nhà hàng thuộc chương trình quốc tế",
+                "ngành Quản trị Du lịch Nhà hàng khoa PSU",
+                "khoa Quản trị Du lịch Nhà hàng PSU"
+            ],
+            "responses": [
+                "Quản trị Du lịch & Nhà hàng chuẩn PSU mã ngành: 7810202 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "điểm xét tuyển học bạ",
+            "patterns": [
+                "cho hỏi điểm xét tuyển theo học bạ",
+                "điểm xét tuyển theo kết quả năm lớp 12",
+                "điểm sàn theo học bạ",
+                "cho hỏi điểm chuẩn theo kết quả năm lớp 12",
+                "điểm chuẩn xét tuyển theo học bạ",
+                "điểm sàn theo kết quả năm lớp 12 ",
+                "điểm xét tuyển theo trung bình môn lớp 12",
+                "điểm xét tuyển theo điểm trung bình môn lớp 12"
+            ],
+            "responses": [
+                "Các ngành = tổng điểm 3 môn >= 18 điểm \nNgành Điều dưỡng = tổng điểm 3 môn >= 19.5 điểm \nNgành Dược = tổng điểm 3 môn >= 24 điểm \nNgành Y Khoa = Răng Hàm Mặt = tổng điểm 3 môn >= 24 điểm"
+            ]
+        },
+        {
+            "tag": "điểm xét tuyển theo THPT",
+            "patterns": [
+                "cho hỏi điểm xét tuyển theo kết quả thi THPT",
+                "cho hỏi điểm xét tuyển theo kết quả thi trung học phổ thông",
+                "Xét tuyển theo kết quả thi THPT",
+                "điểm chuẩn của trường",
+                "cho hỏi điểm sàn của trường"
+            ],
+            "responses": [
+                "Đối với các ngành chung: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi môn 3) + điểm ưu tiên (theo khu vực và đối tượng) \nĐối với ngành Kiến trúc: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi Vẽ Mỹ thuật) + điểm ưu tiên (theo khu vực và đối tượng), Điểm môn Vẽ Mỹ thuật nhân hệ số 2"
+            ]
+        },
+        {
+            "tag": "Điện PNU",
+            "patterns": [
+                "cho hỏi khoa CSU",
+                "các ngành thuộc khoa CSU",
+                "các ngành thuộc khoa đào tạo quốc tế CSU"
+            ],
+            "responses": [
+                "Cơ điện tử & Điện-Điện tử chuẩn PNU chuẩn PNU mã ngành: 7510301 \n +Ngành Kiến trúc Công trình chuẩn CSU mã ngành: 7580101"
+            ]
+        },
+        {
+            "tag": "Điều dưỡng",
+            "patterns": [
+                "điểm xét tuyển ngành điều dưỡng",
+                "cho hỏi điểm xét tuyển ngành điều dưỡng ",
+                "điểm chuẩn của ngành điều dưỡng",
+                "điểm sàn ngành điều dưỡng",
+                "điều dưỡng"
+            ],
+            "responses": [
+                "Ngành Điều dưỡng = tổng điểm 3 môn >= 19.5 điểm (Thí sinh tốt nghiệp THPT có học lực lớp 12 xếp loại Khá trở lên hoặc điểm xét tốt nghiệp THPT từ 6.5 điểm trở lên) \nThí sinh có thể đăng ký xét tuyển Học bạ trực tuyến tại:  http://tuyensinh.duytan.edu.vn/xettuyenhocbatructuyen/"
+            ]
+        },
+        {
+            "tag": "hệ thống thông tin CMU",
+            "patterns": [
+                "cho hỏi khoa hệ thống thông tin CMU",
+                "cho hỏi ngành hệ thống thông tin quốc tế",
+                "hệ thống thông tin chương trình quốc tế",
+                "ngành hệ thống thông tin khoa CMU",
+                "khoa hệ thống thông tin CMU"
+            ],
+            "responses": [
+                "Hệ thống Thông tin Quản lý chuẩn CMU mã ngành: 7340405 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hoá (A00), 2.Toán, KHTN, Văn (A16), 3.Văn, Toán, Lý (C01), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "học bổng",
+            "patterns": [
+                "Cho hỏi về chính sách học bổng",
+                "học bổng năm 2020 - 2021",
+                "chính sách hỗi trợ học bổng",
+                "Cho hỏi về chính sách hỗ trợ học bổng",
+                "Học bổng"
+            ],
+            "responses": [
+                "Số tiền này được trừ trực tiếp khi đóng học phí Học kỳ I - Năm học 2020-2021 và phải đến nhập học trước ngày 25/10, cụ thể: \nNhững thí sinh thuộc các tỉnh Gia Lai, Đăk Lăk, Kontum, Đăk Nông, Lâm Đồng, Khánh Hòa, Phú Yên, Bình Định, sẽ nhận được: \n+Voucher Học bổng có giá trị 2.500.000 đồng (Khi đăng ký vào các ngành trừ ngành Dược sĩ) \n*Voucher Học bổng có giá trị 2.900.000 đồng (Khi đăng ký vào ngành Dược sĩ) \n*Những thí sinh không thuộc các tỉnh Gia Lai, Đăk Lăk, Kontum, Đăk Nông, Lâm Đồng, Khánh Hòa, Phú Yên, Bình Định, sẽ nhận được: \n*Voucher Học bổng có giá trị 2.200.000 đồng (Khi đăng ký vào tất cả các ngành) \n*Những thí sinh ở các tỉnh/ thành khi đăng ký vào 1 trong các chuyên ngành thuộc Khối ngành Xây dựng, Môi trường, Kiến trúc sẽ được nhận: \n*Voucher Học bổng có giá trị 3.000.000 đồng \n*Những thí sinh ở các tỉnh/thành khi đăng ký vào ngành Xây dựng Dân dụng & Công nghiệp chuẩn CSU hoặc Kiến trúc Công trình chuẩn CSU, sẽ nhận được Voucher Học bổng có giá trị: \n*3.000.000 đồng (Trừ ngay vào học phí Học kỳ I - Năm học 2020-2021) & Các Học kỳ kế tiếp sẽ tiếp tục được giảm 1.500.000 đồng mỗi kỳ. \n*Và nhiều chính sách Học bổng Toàn phần (miễn 100% học phí 4 năm học), Bán phần (miễn 50% học phí 4 năm học), Học bổng Điểm cao Đầu vào "
+            ]
+        },
+        {
+            "tag": "Học phí",
+            "patterns": [
+                "Học phí",
+                "cho hỏi học phí",
+                "cho hỏi bảo nhiêu tiền 1 chỉ",
+                "bao nhiêu tiền 1 năm",
+                "học phí 1 kỳ",
+                "học phí 1 năm",
+                "cho hỏi học phí đại học",
+                "học phí năm 2020"
+            ],
+            "responses": [
+                "Đối với trương trình thường 660,000 vnd/tín chỉ, 10,560,000vnd/1 học kỳ \nĐối với trương trình tiên tiến(quốc tế): 820,000 vnd/tín chỉ, 13,120,000 vnd/1 học kỳ \nChi tiết học phí có thể xem tại:https://duytan.edu.vn/tuyen-sinh/Page/ViewProcDetail.aspx?idthongbao=23"
+            ]
+        },
+        {
+            "tag": "hotline",
+            "patterns": [
+                "số đth",
+                "số dth",
+                "cho hỏi số điện thoại",
+                "cho hỏi đường dây nóng",
+                "số điện thoại di động",
+                "số dđ",
+                "hotline"
+            ],
+            "responses": [
+                "Đường dây nóng:02363.653.561 \n02363.650.403  \n02363.827.111 \nDi động:0905.294.390 \n0905.294.391 \n1900.2252"
+            ]
+        },
+        {
+            "tag": "Kế toán PSU",
+            "patterns": [
+                "cho hỏi khoa Kế toán Kiểm toán chuẩn PSU",
+                "cho hỏi khoa Kế toán chuẩn PSU",
+                "ngành Kế toán khoa quốc tế",
+                "cho hỏi ngành Kế toán Kiểm toán khoa quốc tế",
+                "Kế toán Kiểm toán thuộc chương trình quốc tế",
+                "ngành Kế toán Kiểm toán khoa PSU",
+                "khoa Kế toán Kiểm toán chuẩn PSU"
+            ],
+            "responses": [
+                "Kế toán Kiểm toán chuẩn PSU mã ngành: 7340301 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "kiến trúc CSU",
+            "patterns": [
+                "cho hỏi khoa Kiến trúc Công trình chuẩn CSU",
+                "cho hỏi ngành Kiến trúc Công trình khoa quốc tế",
+                "Kiến trúc Công trình thuộc chương trình quốc tế",
+                "ngành Kiến trúc Công trình khoa CSU",
+                "khoa Kiến trúc Công trình CSU"
+            ],
+            "responses": [
+                "Kiến trúc Công trình chuẩn CSU mã ngành: 7580101 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Vẽ (V00), 2.Toán, Văn, Vẽ (V01), 3.Toán, KHXH, Vẽ (M02), 4.Toán, KHTN, Vẽ (M04), 5.Toán, Anh, Vẽ (V02)"
+            ]
+        },
+        {
+            "tag": "Kinh doanh PSU",
+            "patterns": [
+                "cho hỏi khoa Quản trị Kinh doanh chuẩn PSU",
+                "cho hỏi ngành Quản trị Kinh doanh khoa quốc tế",
+                "Quản trị Kinh doanh thuộc chương trình quốc tế",
+                "ngành Quản trị Kinh doanh khoa PSU",
+                "khoa Quản trị Kinh doanh chuẩn PSU"
+            ],
+            "responses": [
+                "Quản trị Kinh doanh chuẩn PSU mã ngành: 7340101 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "Ngành Kiến trúc",
+            "patterns": [
+                "điểm xét tuyển ngành kiến trúc",
+                "điểm xét tuyển kiến trúc",
+                "cho hỏi điểm xét tuyển ngành kiến trúc ",
+                "điểm chuẩn của ngành kiến trúc",
+                "điểm sàn ngành kiến trúc",
+                "ngành kiến trúc"
+            ],
+            "responses": [
+                "Thí sinh tham gia xét tuyển Ngành Kiến trúc sẽ tham dự thi môn Vẽ Mỹ thuật (Hình thức: Vẽ tĩnh vật) do Trường Đại học Duy Tân tổ chức (dự kiến ngày 26 & 27/09/2020) hoặc thí sinh nộp kết quả thi môn Vẽ Mỹ thuật từ các trường khác có tổ chức thi. \nMẫu đăng ký thi tuyển môn Vẽ Mỹ thuật: https://duytan.edu.vn/tuyen-sinh/Page/EnrollArticleViewDetail.aspx?idart=763&idcat=26"
+            ]
+        },
+        {
+            "tag": "ngày tuyển sinh",
+            "patterns": [
+                "ngày tuyển sinh",
+                "tuyển sinh khi nào",
+                "ngày"
+            ],
+            "responses": [
+                "dự kiến từ 26 - 27/09/2020"
+            ]
+        },
+        {
+            "tag": "phần mềm CMU",
+            "patterns": [
+                "cho hỏi khoa công nghệ phần mềm CMU",
+                "cho hỏi khoa phần mềm quốc tế",
+                "ngành kỹ thuật phần mềm CMU",
+                "ngành công nghệ phần mềm quốc tế",
+                "kỹ thuật phần mềm thuộc chương trình quốc tế",
+                "công nghệ phần mềm thuộc chương trình quốc tế"
+            ],
+            "responses": [
+                "Ngành công nghệ Phần mềm chuẩn CMU mã ngành: 7480103 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hoá (A00), 2.Toán, KHTN, Văn (A16), 3.Văn, Toán, Lý (C01), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "PHƯƠNG THỨC TUYỂN SINH",
+            "patterns": [
+                "phương thức tuyển sinh ",
+                "cho hỏi phương thức tuyển sinh ",
+                "có bao nhiêu cách xét tuyển ",
+                "làm thế nào đẻ đăng ký xét tuyển",
+                "làm thế nào đẻ đăng ký tuyển sinh",
+                "đăng ký xét tuyển ",
+                "đăng ký tuyển sinh "
+            ],
+            "responses": [
+                "1) Xét tuyển thẳng \n2) Xét kết quả kỳ thi THPT vào TẤT CẢ các ngành đào tạo của trường \n3) Xét kết quả Học bạ THPT cho tất cả các ngành(Dựa vào kết quả học tập năm lớp 12, cột trung bình cả năm của môn xét tuyển hoặc Dựa vào kết quả điểm Trung bình môn năm lớp 11 & điểm học kỳ 1 lớp 12 "
+            ]
+        },
+        {
+            "tag": "PNU",
+            "patterns": [
+                "cho hỏi khoa PNU",
+                "các ngành thuộc khoa PNU",
+                "các ngành thuộc khoa đào tạo quốc tế PNU",
+                "PNU"
+            ],
+            "responses": [
+                "khoa PNU gồm: \n +Ngành Cơ điện tử chuẩn PNU 112(PNU) mã ngành: 7510301  \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hoá (A00), 2.Toán, KHTN, Văn (A16), 3.Văn, Toán, Lý (C01), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "PSU",
+            "patterns": [
+                "cho hỏi khoa PSU",
+                "các ngành thuộc khoa PSU",
+                "các ngành thuộc khoa đào tạo quốc tế PSU",
+                "PSU"
+            ],
+            "responses": [
+                "khoa PSU gồm: \n +Ngành Quản trị Kinh doanh chuẩn PSU mã ngành: 7340101 \n +Ngành tài chính-Ngân hàng chuẩn PSU mã ngành: 7340201 \n +Ngành Kế toán Kiểm toán chuẩn PSU mã ngành: 7340301 \n +Ngành Quản trị Du lịch & Khách sạn chuẩn PSU mã ngành: 7810201 \n +Ngành Quản trị Du lịch & Lữ hành chuẩn PSU mã ngành: 7810103 \n +Ngành Quản trị Du lịch & Nhà hàng chuẩn PSU mã ngành: 7810202"
+            ]
+        },
+        {
+            "tag": "quốc tế",
+            "patterns": [
+                "cho hỏi khoa đào tạo quốc tế",
+                "chương trình đào tạo quốc tế ",
+                "khoa quốc tế",
+                "cho hỏi chương trình đào tạo quốc tế",
+                "các ngành thuộc khoa quốc tế"
+            ],
+            "responses": [
+                "khoa CMU Hợp tác với Đại học Carnegie Mellon về: Công nghệ Phần mềm, Hệ thống Thông tin Quản lý, và An toàn Thông tin. \nKhoa PSU hợp tác với Đại học Seatle Pacific và Penn State về: Quản trị Kinh doanh, Kế toán, Tài chính-Ngân hàng, Du lịch. \nKhoa CSU hợp tác với Đại học Bang California Fullerton về: Xây dựng và Kiến trúc \nKhoa PNU hợp tác với Đại học Purdue về: cơ điện tử"
+            ]
+        },
+        {
+            "tag": "Tài chính PSU",
+            "patterns": [
+                "cho hỏi khoa Tài chính-Ngân hàng chuẩn PSU",
+                "cho hỏi ngành Kế toán Kiểm toán khoa quốc tế",
+                "Kế toán Kiểm toán thuộc chương trình quốc tế",
+                "ngành Kế toán Kiểm toán khoa PSU",
+                "khoa Kế toán Kiểm toán chuẩn PSU"
+            ],
+            "responses": [
+                "Tài chính-Ngân hàng chuẩn PSU mã ngành: 7340201 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Hóa (A00), 2.Văn, Sử, Địa (C00), 3.Văn, Toán, KHXH (C15), 4.Văn, Toán, Anh (D01)"
+            ]
+        },
+        {
+            "tag": "thời gian nhập học",
+            "patterns": [
+                "thời gian nhập học",
+                "cho hỏi thời gian nhập học",
+                "khi nào nhập học",
+                "bắt đầu học khi nào",
+                "khi nào bắt đầu học"
+            ],
+            "responses": [
+                "thời gian nhập học: Dự kiến tháng 8/2020. \nGhi chú: Thí sinh nhập học đúng Thời gian thông báo trên Giấy báo trúng tuyển."
+            ]
+        },
+        {
+            "tag": "thủ tục nhập học",
+            "patterns": [
+                "cho hỏi thủ tục nhập học",
+                "cách làm thủ tục nhập học",
+                "cách nhập học",
+                "hồ sơ nhập học",
+                "hướng dẫn nhập học",
+                "nhập học như thế nào"
+            ],
+            "responses": [
+                "HƯỚNG DẪN NHẬP HỌC TRỰC TIẾP tại: Trường Đại học Duy Tân, số 254 Nguyễn Văn Linh, Quận Thanh Khê, Tp. Đà Nẵng  \n+Buổi sáng: từ 07g00 - 11g00 (từ Thứ 2 đến Chủ Nhật)  \n+Buổi chiều: từ 13g00 - 17g00 (từ Thứ 2 đến Chủ Nhật) \nHƯỚNG DẪN NHẬP HỌC ONLINE xem tại: http://nhaphoc.duytan.edu.vn  \nchi tiết xem tại:https://duytan.edu.vn/tuyen-sinh/Page/ViewProcDetail.aspx?idthongbao=13"
+            ]
+        },
+        {
+            "tag": "VÙNG TUYỂN SINH",
+            "patterns": [
+                "trường tuyển sinh ở những khu vực nào ",
+                "trường tuyển sinh ở đâu ",
+                "tuyển sinh ở những khu vực nào ",
+                "cho hỏi trường tuyển sinh ở những khu vực nào ",
+                "cho hỏi tuyển sinh ở những khu vực nào ",
+                "cho hỏi khu vực tuyển sinh",
+                "ở đâu",
+                "khu vực"
+            ],
+            "responses": [
+                "Tuyển sinh trong cả nước \nĐịa chỉ nhận Hồ sơ Xét tuyển: \n    * TRUNG TÂM TUYỂN SINH TRƯỜNG ĐẠI HỌC DUY TÂN \n    - Địa chỉ: 254 Nguyễn Văn Linh, Phường Thạc Gián, Quận Thanh Khê, T.phố Đà Nẵng. \n    - Điện thoại: 1900.2252 - 0905.294.390 - 0905.294.391"
+            ]
+        },
+        {
+            "tag": "xây dựng CSU",
+            "patterns": [
+                "cho hỏi khoa Xây dựng Dân dụng & Công nghiệp chuẩn CSU",
+                "cho hỏi ngành xây dựng khoa quốc tế",
+                "Xây dựng dân dụng thuộc chương trình quốc tế",
+                "ngành xây dựng dân dụng khoa CSU",
+                "khoa xây dựng dân dụng CSU"
+            ],
+            "responses": [
+                "Kiến trúc Công trình chuẩn CSU mã ngành: 7580101 \nxét tuyển theo kết quả thi tốt nghiệp THPT và học bạ THPT lớp 12 hoặc lớp 11 & học kỳ I lớp 12 \nThí sinh chọn 1 trong 4 tổ hợp môn để xét tuyển: 1.Toán, Lý, Vẽ (V00), 2.Toán, Văn, Vẽ (V01), 3.Toán, KHXH, Vẽ (M02), 4.Toán, KHTN, Vẽ (M04), 5.Toán, Anh, Vẽ (V02)"
+            ]
+        },
+        {
+            "tag": "xét tuyển thẳng",
+            "patterns": [
+                "cho hỏi điều kiện xét tuyển thẳng",
+                "xét tuyển thẳng",
+                "đối tượng xét tuyển thẳng",
+                "điều kiện xét tuyển thẳng",
+                "xét tuyển thẳng"
+            ],
+            "responses": [
+                "1. Tham dự đội tuyển thi Olympic quốc tế, cuộc thi KHKT quốc tế. Xét giải các năm: 2018, 2019, 2020. \n2. Giải học sinh giỏi Nhất, Nhì, Ba, Khuyến khích cấp Quốc gia; cấp tỉnh, thành phố trực thuộc Trung ương \n3. Giải Nhất, Nhì, Ba, Khuyến khích trong Cuộc thi Khoa học Kỹ thuật cấp quốc gia; cấp tỉnh, thành phố trực thuộc Trung ương \n4. Giải Nhất, Nhì, Ba, khuyến khích tại các kỳ thi tay nghề khu vực ASEAN, thi tay nghề quốc tế \n5. Tham gia Vòng thi tuần trong cuộc thi Đường lên đỉnh Olympia trên Đài truyền hình Việt Nam. \n6. Xét tuyển thẳng đối với các học sinh tốt nghiệp các trường THPT Chuyên của tỉnh, thành phố trực thuộc Trung ương \n7. Xét tuyển thẳng Thí sinh là thành viên đội tuyển quốc gia \n8. Xét tuyển thẳng Thí sinh là người nước ngoài tốt nghiệp THPT hoặc tương đương THPT của Việt Nam \nMẫu đăng ký Xét tuyển thẳng: https://duytan.edu.vn/tuyen-sinh/Page/EnrollArticleViewDetail.aspx?idart=764&idcat=26"
+            ]
+        },
+        {
+            "tag": "y dược",
+            "patterns": [
+                "điểm xét tuyển ngành dược",
+                "điểm xét tuyển ngành y dược",
+                "điểm xét tuyển ngành y dược",
+                "cho hỏi điểm xét tuyển ngành dược ",
+                "cho hỏi điểm xét tuyển ngành dược sĩ",
+                "cho hỏi điểm xét tuyển ngành y dược ",
+                "điểm chuẩn của ngành y dược",
+                "điểm sàn ngành y dược",
+                "điểm chuẩn của ngành dược sĩ",
+                "điểm sàn ngành dược sĩ",
+                "dược sĩ",
+                "y dược"
+            ],
+            "responses": [
+                "Ngành Dược = tổng điểm 3 môn >= 24 điểm (Thí sinh tốt nghiệp THPT có học lực lớp 12 xếp loại Giỏi trở lên hoặc điểm xét tốt nghiệp THPT từ 8.0 điểm trở lên) \nThí sinh có thể đăng ký xét tuyển Học bạ trực tuyến tại: http://tuyensinh.duytan.edu.vn/xettuyenhocbatructuyen/"
+            ]
+        },
+        {
+            "tag": "y khoa",
+            "patterns": [
+                "điểm xét tuyển ngành y khoa",
+                "điểm xét tuyển ngành Bác sĩ Đa khoa",
+                "cho hỏi điểm xét tuyển ngành Bác sĩ Đa khoa ",
+                "cho hỏi điểm xét tuyển ngành y khoa ",
+                "điểm chuẩn của ngành y khoa",
+                "điểm sàn ngành y khoa",
+                "điểm chuẩn của ngành bác sĩ đa khoa",
+                "điểm sàn ngành bác sĩ đa khoa",
+                "y khoa"
+            ],
+            "responses": [
+                "Ngành Y Khoa = Răng Hàm Mặt = tổng điểm 3 môn >= 22 điểm (Thí sinh tốt nghiệp THPT có học lực lớp 12 xếp loại Giỏi trở lên hoặc điểm xét tốt nghiệp THPT từ 8.0 điểm trở lên) \nThí sinh có thể đăng ký xét tuyển Học bạ trực tuyến tại:  http://tuyensinh.duytan.edu.vn/xettuyenhocbatructuyen/"
             ]
         }
     ]

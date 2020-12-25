@@ -17,6 +17,7 @@ FILE = "data.pth"
 data = torch.load(FILE)
 btags = ""
 bques = ""
+bnon = ""
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
@@ -54,6 +55,8 @@ def solve(msg):
     else:
         if msg not in bques:
             bques += msg + " - "
+            global bnon
+            bnon = msg + ": Mình tạm thời chưa có đáp án"
             return msg + ": Mình tạm thời chưa có đáp án" + "\n\n"
         else:
             return ""
@@ -61,9 +64,10 @@ def solve(msg):
 def getRes(mssg,voice):
     empt = "Mình tạm thời chưa có đáp án"
     bot_response = ""
+    global bnon
     if type(multiSentences(mssg)) is str:
         bot_response += solve(mssg)
-        if empt in solve(mssg):
+        if empt in bnon:
             sendNotice(mssg)
     else:
         listmsg = multiSentences(mssg)
@@ -72,7 +76,7 @@ def getRes(mssg,voice):
         else:
             for msg in listmsg:
                 bot_response += solve(msg)
-                if empt in solve(msg):
+                if empt in bnon:
                    sendNotice(msg)
     global btags
     btags = ""
@@ -80,11 +84,11 @@ def getRes(mssg,voice):
     bques = ""
     bot_response = bot_response[:-2]
     bot_voice = re.sub(r'(https?://[^\s]+)','', bot_response)
-
-    print(bot_response)
+    bnon = ""
+    #print(bot_response)
     if(voice == 1):
         tts(bot_voice)
     return bot_response
 
 #msg = input('input: ')
-getRes("system context diagram",0)
+#getRes(["888888","xcacsac","15181"],0)
