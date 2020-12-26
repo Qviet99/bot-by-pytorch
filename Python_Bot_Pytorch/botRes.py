@@ -91,4 +91,4 @@ def getRes(mssg,voice):
     return bot_response
 
 #msg = input('input: ')
-#getRes(["888888","xcacsac","15181"],0)
+#getRes("điểm xét tuyển",0)

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './ChatBox.css';
 import tts from './img/texttospeech.png'
 import un_tts from './img/unable_texttospeech.png'
+import botlogo from './img/bot.png'
 
 var state = false;
 var audioCtx = new AudioContext() 
@@ -121,15 +122,15 @@ function showChat() {
     if(serverStatus == false){
         startServer();
         serverStatus = true;
+        div('bot_res','Chào bạn, mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh DTU !') 
     }
-    document.getElementById("Button").style.visibility = 'hidden';
+    document.getElementById("LogoButton").style.visibility = 'hidden';
     document.getElementById("Bot").style.visibility = 'visible';
-    div('bot_res','Chào bạn, mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh DTU !') 
 }
 
 function closeChat(){
     document.getElementById("Bot").style.visibility = 'hidden';
-    document.getElementById("Button").style.visibility = 'visible';
+    document.getElementById("LogoButton").style.visibility = 'visible';
 }
 
 function startServer(){
@@ -162,12 +163,13 @@ function ChatBox(){
 
     return (
         <div>
-            <button id="Button" onClick={showChat}>
+            <button id="LogoButton" onClick={showChat}>
                 <span class="tooltipbot">Chào bạn ! Mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh</span>
             </button>
             <div id="Bot">
-                <div id="ChatHeader">
-                    
+                <div id="ChatHead">
+                    <img id="BotLogo" src={botlogo} />
+                    <button id="CloseChat" onClick={closeChat}>X</button>
                 </div>
                 <div id="ChatBody">
                 <div>

@@ -8,31 +8,35 @@ CORS(control)
 
 checkRun = 0
 subproc = Popen
+def openSubprocess(number):
+    global subproc
+    if number == 0:
+        subproc = Popen(['python', 'server.py'])
+    if number == 1:
+        subproc.terminate()
 
 @control.route('/api/start', methods=['GET'])
 def start():
-    global subproc
     global checkRun
     checkRun = 1
-    subproc = Popen(['python', 'server.py'])
+    openSubprocess(0)
     return "Start"
 
 @control.route('/api/stop', methods=['GET'])
 def stop():
-    global subproc
     global checkRun
     checkRun == 0
-    subproc.terminate()
+    openSubprocess(1)
     return "Stop"
 
 @control.route('/api/restart', methods=['GET'])
 def restart():
     global checkRun
+    os.remove("data.pth")
     os.system("python train.py")
     if checkRun == 1:
-        global subproc
-        stop()
-        start()
+        openSubprocess(1)
+        openSubprocess(0)
     return "Restart"
 
 if __name__ == '__main__':

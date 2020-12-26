@@ -1,15 +1,6 @@
 {
     "intents": [
         {
-            "tag": "1",
-            "patterns": [
-                "1551515"
-            ],
-            "responses": [
-                "cxzczxc"
-            ]
-        },
-        {
             "tag": "an ninh mạng CMU",
             "patterns": [
                 "cho hỏi khoa an ninh mạng CMU",
@@ -35,7 +26,10 @@
                 "See you next time",
                 "have a good day",
                 "See you later !",
-                "bye"
+                "bye",
+                "chào tạm biệt",
+                "hẹn gặp lại",
+                "tạm biệt"
             ]
         },
         {
@@ -84,6 +78,20 @@
             ],
             "responses": [
                 "khoa CSU gồm: \n +Ngành Xây dựng Dân dụng & Công nghiệp chuẩn CSU mã ngành: 7580201 \n +Ngành Kiến trúc Công trình chuẩn CSU mã ngành: 7580101"
+            ]
+        },
+        {
+            "tag": "DTU",
+            "patterns": [
+                "Đôi nét về duy tân",
+                "Duy tân",
+                "DTU",
+                "Thông tin về duy tân",
+                "trường duy tân",
+                "Đại học duy tân"
+            ],
+            "responses": [
+                "Đại học Duy Tân được thành lập từ ngày 11/11/1994 theo Quyết định Số 666/TTg của Thủ tướng Chính phủ \nNăm 2015, Trường đã chuyển đổi sang loại hình Tư thục theo Quyết định số 1704/QĐ-TTg ngày 02/10/2015 của Thủ tướng Chính phủ \nDuy Tân là Đại học Tư thục Đầu tiên và Lớn nhất miền Trung đào tạo đa bậc, đa ngành, đa lĩnh vực \nChi tiết xem thêm tại:https://duytan.edu.vn/gioi-thieu"
             ]
         },
         {
@@ -148,7 +156,8 @@
                 "cho hỏi điểm xét tuyển theo kết quả thi trung học phổ thông",
                 "Xét tuyển theo kết quả thi THPT",
                 "điểm chuẩn của trường",
-                "cho hỏi điểm sàn của trường"
+                "cho hỏi điểm sàn của trường",
+                "điểm tuyển sinh"
             ],
             "responses": [
                 "Đối với các ngành chung: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi môn 3) + điểm ưu tiên (theo khu vực và đối tượng) \nĐối với ngành Kiến trúc: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi Vẽ Mỹ thuật) + điểm ưu tiên (theo khu vực và đối tượng), Điểm môn Vẽ Mỹ thuật nhân hệ số 2"
@@ -324,7 +333,8 @@
                 "làm thế nào đẻ đăng ký xét tuyển",
                 "làm thế nào đẻ đăng ký tuyển sinh",
                 "đăng ký xét tuyển ",
-                "đăng ký tuyển sinh "
+                "đăng ký tuyển sinh ",
+                "cách xét tuyển"
             ],
             "responses": [
                 "1) Xét tuyển thẳng \n2) Xét kết quả kỳ thi THPT vào TẤT CẢ các ngành đào tạo của trường \n3) Xét kết quả Học bạ THPT cho tất cả các ngành(Dựa vào kết quả học tập năm lớp 12, cột trung bình cả năm của môn xét tuyển hoặc Dựa vào kết quả điểm Trung bình môn năm lớp 11 & điểm học kỳ 1 lớp 12 "
@@ -405,6 +415,17 @@
             ],
             "responses": [
                 "HƯỚNG DẪN NHẬP HỌC TRỰC TIẾP tại: Trường Đại học Duy Tân, số 254 Nguyễn Văn Linh, Quận Thanh Khê, Tp. Đà Nẵng  \n+Buổi sáng: từ 07g00 - 11g00 (từ Thứ 2 đến Chủ Nhật)  \n+Buổi chiều: từ 13g00 - 17g00 (từ Thứ 2 đến Chủ Nhật) \nHƯỚNG DẪN NHẬP HỌC ONLINE xem tại: http://nhaphoc.duytan.edu.vn  \nchi tiết xem tại:https://duytan.edu.vn/tuyen-sinh/Page/ViewProcDetail.aspx?idthongbao=13"
+            ]
+        },
+        {
+            "tag": "trọ",
+            "patterns": [
+                "trọ xung quanh duy tân",
+                "trọ gần đại học duy tân",
+                "thuê trọ xung quanh trường"
+            ],
+            "responses": [
+                "Địa chỉ: 150/7 Nguyễn Hoàng \nGiá: 1tr100 / 2 người , 1tr / 1 người \nLiên hệ: 0905-031-449 \nĐịa chỉ: K374/ H20/ 5 Núi Thành, TP. Đà Nẵng \nSố phòng: 04, Diện tích: 25m/phòng \nGiá: 1tr2/phòng chi tiết xem thêm tại: http://doantn.duytan.edu.vn/Home/ArticleDetail/vn/85/250/cho-thue-phong-tro-da-nang-thang-9"
             ]
         },
         {
