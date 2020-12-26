@@ -4,11 +4,11 @@ import './ChatBox.css';
 import tts from './img/texttospeech.png'
 import un_tts from './img/unable_texttospeech.png'
 import botlogo from './img/bot.png'
-import { NULL } from 'node-sass';
 
 var state = false;
 var audioCtx = new AudioContext() 
 var serverStatus = false;
+var source = null;
 
 function sendMsg() {
     var messeg = document.getElementById("user_input").value;
@@ -74,6 +74,7 @@ function botRes(msg){
 function activeVoice(){
     if(state === true){
         state = false;
+        source.stop(0)
         document.getElementById("texttospeech").src = un_tts;
     }
     else{
@@ -91,10 +92,11 @@ function botSpeech(){
     fetch("http://localhost:6000/api/bot/speech", requestOptions)
     .then(response => response.arrayBuffer())
     .then(result => audioCtx.decodeAudioData(result, function(decodedData) {
-        var source = audioCtx.createBufferSource();
+        source = audioCtx.createBufferSource();
         source.buffer = decodedData;
         source.connect(audioCtx.destination);
         source.start(0);
+        
     }))
     .catch(error => console.log('error', error));
 }
@@ -122,7 +124,7 @@ function sendReportAPI(msg){
 }
 
 function showChat() {
-    if(serverStatus == false){
+    if(serverStatus === false){
         startServer();
         serverStatus = true;
         div('bot_res','Chào bạn, mình là bot hỗ trợ tìm kiếm thông tin tuyển sinh DTU !') 
