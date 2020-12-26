@@ -32,7 +32,6 @@ def stop():
 @control.route('/api/restart', methods=['GET'])
 def restart():
     global checkRun
-    os.remove("data.pth")
     os.system("python train.py")
     if checkRun == 1:
         openSubprocess(1)

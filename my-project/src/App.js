@@ -12,7 +12,7 @@ function App() {
      <div className="App">  
        <Router>    
         <div className="container">      
-            <Route path ='/home' component={Interface}></Route>   
+            <Route path ='/' component={Interface}></Route>   
         </div>    
       </Router>    
       </div>  

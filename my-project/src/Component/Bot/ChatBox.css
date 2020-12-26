@@ -222,6 +222,12 @@
     top: 46px;
 }
 
+#txtArea{
+    resize: none;
+    overflow-y: scroll;
+    height: 100px;
+}
+
 #Bot{
     visibility: hidden;
     position: fixed; 

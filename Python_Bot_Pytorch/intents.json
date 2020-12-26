@@ -20,7 +20,8 @@
                 "See you later",
                 "Goodbye",
                 "bye",
-                "tạm biệt"
+                "tạm biệt",
+                "lalalalala"
             ],
             "responses": [
                 "See you next time",
@@ -97,8 +98,6 @@
         {
             "tag": "Du lịch & Khách sạn PSU",
             "patterns": [
-                "cho hỏi khoa Quản trị Du lịch Khách sạn chuẩn PSU",
-                "cho hỏi ngành Quản trị Du lịch Khách sạn khoa quốc tế",
                 "Quản trị Du lịch & Khách sạn thuộc chương trình quốc tế",
                 "ngành Quản trị Du lịch Khách sạn khoa PSU",
                 "khoa Quản trị Du lịch Khách sạn PSU"
@@ -166,9 +165,7 @@
         {
             "tag": "Điện PNU",
             "patterns": [
-                "cho hỏi khoa CSU",
-                "các ngành thuộc khoa CSU",
-                "các ngành thuộc khoa đào tạo quốc tế CSU"
+                "mã ngành điện & điện tử"
             ],
             "responses": [
                 "Cơ điện tử & Điện-Điện tử chuẩn PNU chuẩn PNU mã ngành: 7510301 \n +Ngành Kiến trúc Công trình chuẩn CSU mã ngành: 7580101"
@@ -343,7 +340,6 @@
         {
             "tag": "PNU",
             "patterns": [
-                "cho hỏi khoa PNU",
                 "các ngành thuộc khoa PNU",
                 "các ngành thuộc khoa đào tạo quốc tế PNU",
                 "PNU"
@@ -362,6 +358,15 @@
             ],
             "responses": [
                 "khoa PSU gồm: \n +Ngành Quản trị Kinh doanh chuẩn PSU mã ngành: 7340101 \n +Ngành tài chính-Ngân hàng chuẩn PSU mã ngành: 7340201 \n +Ngành Kế toán Kiểm toán chuẩn PSU mã ngành: 7340301 \n +Ngành Quản trị Du lịch & Khách sạn chuẩn PSU mã ngành: 7810201 \n +Ngành Quản trị Du lịch & Lữ hành chuẩn PSU mã ngành: 7810103 \n +Ngành Quản trị Du lịch & Nhà hàng chuẩn PSU mã ngành: 7810202"
+            ]
+        },
+        {
+            "tag": "Quản trị du lịch",
+            "patterns": [
+                "quản trị du lịch"
+            ],
+            "responses": [
+                "Có 3 loại quản trị du lịch:\n1. Quản trị du lịch & khách sạn\n2. Quản trị du lịch & lữ hành\n3. Quản trị du lịch & nhà hàng"
             ]
         },
         {

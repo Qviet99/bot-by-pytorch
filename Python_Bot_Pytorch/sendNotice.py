@@ -15,4 +15,3 @@ def sendNotice(data):
     response = requests.post( url, headers=headers, data=json.dumps(payload))
 
     print(response.text)
-    return(response.text)
