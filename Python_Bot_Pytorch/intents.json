@@ -20,8 +20,7 @@
                 "See you later",
                 "Goodbye",
                 "bye",
-                "tạm biệt",
-                "lalalalala"
+                "tạm biệt"
             ],
             "responses": [
                 "See you next time",
@@ -98,6 +97,8 @@
         {
             "tag": "Du lịch & Khách sạn PSU",
             "patterns": [
+                "cho hỏi khoa Quản trị Du lịch Khách sạn chuẩn PSU",
+                "cho hỏi ngành Quản trị Du lịch Khách sạn khoa quốc tế",
                 "Quản trị Du lịch & Khách sạn thuộc chương trình quốc tế",
                 "ngành Quản trị Du lịch Khách sạn khoa PSU",
                 "khoa Quản trị Du lịch Khách sạn PSU"
@@ -155,8 +156,7 @@
                 "cho hỏi điểm xét tuyển theo kết quả thi trung học phổ thông",
                 "Xét tuyển theo kết quả thi THPT",
                 "điểm chuẩn của trường",
-                "cho hỏi điểm sàn của trường",
-                "điểm tuyển sinh"
+                "cho hỏi điểm sàn của trường"
             ],
             "responses": [
                 "Đối với các ngành chung: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi môn 3) + điểm ưu tiên (theo khu vực và đối tượng) \nĐối với ngành Kiến trúc: Điểm Xét tuyển = (điểm thi môn 1 + điểm thi môn 2 + điểm thi Vẽ Mỹ thuật) + điểm ưu tiên (theo khu vực và đối tượng), Điểm môn Vẽ Mỹ thuật nhân hệ số 2"
@@ -165,10 +165,12 @@
         {
             "tag": "Điện PNU",
             "patterns": [
-                "mã ngành điện & điện tử"
+                "cho hỏi khoa PNU",
+                "các ngành thuộc khoa PNU",
+                "các ngành thuộc khoa đào tạo quốc tế PNU"
             ],
             "responses": [
-                "Cơ điện tử & Điện-Điện tử chuẩn PNU chuẩn PNU mã ngành: 7510301 \n +Ngành Kiến trúc Công trình chuẩn CSU mã ngành: 7580101"
+                "Cơ điện tử & Điện-Điện tử chuẩn PNU chuẩn PNU mã ngành: 7510301 \n +Ngành Kiến trúc Công trình chuẩn PNU mã ngành: 7580101"
             ]
         },
         {
@@ -334,12 +336,13 @@
                 "cách xét tuyển"
             ],
             "responses": [
-                "1) Xét tuyển thẳng \n2) Xét kết quả kỳ thi THPT vào TẤT CẢ các ngành đào tạo của trường \n3) Xét kết quả Học bạ THPT cho tất cả các ngành(Dựa vào kết quả học tập năm lớp 12, cột trung bình cả năm của môn xét tuyển hoặc Dựa vào kết quả điểm Trung bình môn năm lớp 11 & điểm học kỳ 1 lớp 12 "
+                "Xét tuyển theo 3 hình thức: \n 1) Xét tuyển thẳng \n 2) Xét kết quả kỳ thi THPT vào TẤT CẢ các ngành đào tạo của trường \n 3) Xét kết quả Học bạ THPT cho tất cả các ngành(Dựa vào kết quả học tập năm lớp 12, cột trung bình cả năm của môn xét tuyển hoặc Dựa vào kết quả điểm Trung bình môn năm lớp 11 & điểm học kỳ 1 lớp 12 "
             ]
         },
         {
             "tag": "PNU",
             "patterns": [
+                "cho hỏi khoa PNU",
                 "các ngành thuộc khoa PNU",
                 "các ngành thuộc khoa đào tạo quốc tế PNU",
                 "PNU"
@@ -363,10 +366,14 @@
         {
             "tag": "Quản trị du lịch",
             "patterns": [
-                "quản trị du lịch"
+                "Quản trị du lịch",
+                "cho hỏi ngành Quản trị Du lịch khoa quốc tế",
+                "Quản trị Du lịch thuộc chương trình quốc tế",
+                "ngành Quản trị Du lịch khoa PSU",
+                "khoa Quản trị Du lịch PSU"
             ],
             "responses": [
-                "Có 3 loại quản trị du lịch:\n1. Quản trị du lịch & khách sạn\n2. Quản trị du lịch & lữ hành\n3. Quản trị du lịch & nhà hàng"
+                "Quản trị Du lịch & Khách sạn chuẩn PSU \nQuản trị Du lịch & Khách sạn chuẩn PSU \nQuản trị Du lịch & Lữ hành chuẩn PSU \nQuản trị Du lịch & Nhà hàng chuẩn PSU \nBạn muốn hỏi ngành nào ?"
             ]
         },
         {
@@ -431,6 +438,24 @@
             ],
             "responses": [
                 "Địa chỉ: 150/7 Nguyễn Hoàng \nGiá: 1tr100 / 2 người , 1tr / 1 người \nLiên hệ: 0905-031-449 \nĐịa chỉ: K374/ H20/ 5 Núi Thành, TP. Đà Nẵng \nSố phòng: 04, Diện tích: 25m/phòng \nGiá: 1tr2/phòng chi tiết xem thêm tại: http://doantn.duytan.edu.vn/Home/ArticleDetail/vn/85/250/cho-thue-phong-tro-da-nang-thang-9"
+            ]
+        },
+        {
+            "tag": "tư vấn đăng kí",
+            "patterns": [
+                "đăng kí xét học bạ đợt 1 mà chưa có bằng tốt nghiệp, e có thể bổ sung sau được không ạ"
+            ],
+            "responses": [
+                "Đơn xét tuyển theo mẫu trường \nBản sao bằng tốt nghiệp THPT hoặc bản sao Giấy chứng nhận tốt nghiệp THPT tạm thời; Bản sao học bạ công chứng Hồ sơ nào đang có thì em nộp về trường để xét tuyển trước và bổ sung hồ sơ còn thiếu sau theo quy định"
+            ]
+        },
+        {
+            "tag": "tư vấn tuyển sinh",
+            "patterns": [
+                "đã đăng kí xét tuyển trực tuyến "
+            ],
+            "responses": [
+                "Đơn xét tuyển theo mẫu trường \nBản sao bằng tốt nghiệp THPT hoặc bản sao Giấy chứng nhận tốt nghiệp THPT tạm thời; Bản sao học bạ công chứng Hồ sơ nào đang có thì em nộp về trường để xét tuyển trước và bổ sung hồ sơ còn thiếu sau theo quy định"
             ]
         },
         {

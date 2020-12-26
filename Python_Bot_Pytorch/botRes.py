@@ -9,28 +9,27 @@ from sendNotice import sendNotice
 from texttospeech import tts
 
 device = torch.device('cpu')
-
-with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
-    intents = json.load(f)
-
-FILE = "data.pth"
-data = torch.load(FILE)
 btags = ""
 bques = ""
 bnon = False
 
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data["all_words"]
-tags = data["tags"]
-model_state = data["model_state"]
-
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
-model.eval()
-
 def solve(msg):
+    with open('intents.json', 'r', encoding='utf-8', errors='ignore') as f:
+        intents = json.load(f)
+
+    FILE = "data.pth"
+    data = torch.load(FILE)
+
+    input_size = data["input_size"]
+    hidden_size = data["hidden_size"]
+    output_size = data["output_size"]
+    all_words = data["all_words"]
+    tags = data["tags"]
+    model_state = data["model_state"]
+
+    model = NeuralNet(input_size, hidden_size, output_size).to(device)
+    model.load_state_dict(model_state)
+    model.eval()
     global btags
     global bques
     sentence = msg
@@ -52,6 +51,8 @@ def solve(msg):
                     return (response) + "\n\n"
                 else:
                     return ""
+            else:
+                continue
     else:
         if msg not in bques:
             bques += msg + " - "
@@ -68,7 +69,7 @@ def getRes(mssg,voice):
     if type(multiSentences(mssg)) is str:
         bot_response += solve(mssg)
         if bnon == True:
-            sendNotice()
+            sendNotice(mssg)
     else:
         listmsg = multiSentences(mssg)
         if listmsg == []:

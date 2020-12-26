@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 from botRes import getRes
+import pathlib
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +15,8 @@ def index():
 
 @app.route('/api/bot/speech', methods=['POST'])
 def botspeech():
-    path = "C:/Users/KimAnh/Desktop/Python_Bot_Pytorch/botspeech.wav"
+    pth = pathlib.Path(__file__).parent.absolute()
+    path = str(pth) + "/botspeech.wav"
     return send_file(path, mimetype="audio/wav", as_attachment=False, attachment_filename="test.wav")
 
 if __name__ == '__main__':

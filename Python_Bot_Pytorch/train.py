@@ -6,6 +6,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from getJSON import getJSON
 from model import NeuralNet
+import os
 
 getJSON()
 
@@ -54,8 +55,8 @@ class ChatDataset(Dataset):
         return self.n_samples
     
 #Hyperparameters
-batch_size = 8
-hidden_size = 8
+batch_size = 54
+hidden_size = 54
 output_size = len(tags)
 input_size = len(x_train[0])
 learning_rate = 0.001
@@ -98,6 +99,8 @@ data =  {
     "all_words": all_words,
     "tags": tags
 }
+
+os.remove("data.pth")
 
 FILE = "data.pth"
 torch.save(data, FILE)
