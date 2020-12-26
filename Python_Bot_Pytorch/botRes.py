@@ -68,7 +68,7 @@ def getRes(mssg,voice):
     if type(multiSentences(mssg)) is str:
         bot_response += solve(mssg)
         if bnon == True:
-            sendNotice("Mình tạm thời chưa có đáp án \n Bạn hãy để lại sđt và câu hỏi tại mục report hoặc liên hệ trực tiếp số điện thoại 0868355415")
+            sendNotice()
     else:
         listmsg = multiSentences(mssg)
         if listmsg == []:
