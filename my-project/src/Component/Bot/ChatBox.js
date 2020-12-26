@@ -4,6 +4,7 @@ import './ChatBox.css';
 import tts from './img/texttospeech.png'
 import un_tts from './img/unable_texttospeech.png'
 import botlogo from './img/bot.png'
+import { NULL } from 'node-sass';
 
 var state = false;
 var audioCtx = new AudioContext() 
@@ -35,7 +36,9 @@ function div(str,msg){
 
 var keyEnter = (event) => {
     if(event.keyCode === 13){
-        sendMsg()
+        var input = document.getElementById("user_input").value;
+        if (input !== "")
+            sendMsg()
     }
 }
 
