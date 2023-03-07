@@ -58,7 +58,7 @@ def solve(msg):
             bques += msg + " - "
             global bnon
             bnon = True
-            return msg + ": Mình tạm thời chưa có đáp án \n Bạn hãy để lại sđt và câu hỏi tại mục report hoặc liên hệ trực tiếp số điện thoại 0868355415" + "\n\n"
+            return msg + ": Sorry but I dont know the answer" + "\n\n"
         else:
             return ""
 
